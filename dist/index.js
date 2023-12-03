@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Functions_1 = require("./Functions");
+const user = (0, Functions_1.createUser)('John Doe', 25);
+const itemA = (0, Functions_1.createItem)('Item A', 10, 'Description for Item A');
+const itemB = (0, Functions_1.createItem)('Item B', 15, 'Description for Item B');
+const itemC = (0, Functions_1.createItem)('Item C', 20, 'Description for Item C');
+(0, Functions_1.addToCart)(itemA, user);
+(0, Functions_1.printCart)(user);
+console.log('Cart Total:', (0, Functions_1.cartTotal)(user));
+(0, Functions_1.addToCart)(itemB, user);
+(0, Functions_1.addToCart)(itemC, user);
+(0, Functions_1.addToCart)(itemA, user);
+(0, Functions_1.printCart)(user);
+console.log('Cart Total:', (0, Functions_1.cartTotal)(user));
+(0, Functions_1.removeFromCart)(itemA, user);
+(0, Functions_1.printCart)(user);
+console.log('Cart Total:', (0, Functions_1.cartTotal)(user));
